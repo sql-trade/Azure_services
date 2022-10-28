@@ -29,7 +29,7 @@ Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask -Verbose
 Write-Host "Setting Date and Time Settings"
 ####  TimeZone  -->  Berlin, Bern, Rome
 
-##    verfügbare TimeZones
+##    verfÃ¼gbare TimeZones
 ##    Get-TimeZone -ListAvailable
 
 ##Id                         : W. Europe Standard Time
@@ -81,3 +81,18 @@ If(!(test-path -PathType container $path) )
 }
 
 ##--------------------------------------------------------
+
+####  download  google Chrome.msi
+
+##$WebClient = New-Object System.Net.WebClient
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/GoogleChromeStandaloneEnterprise64.msi"
+$to_folder = "C:\software\GoogleChromeStandaloneEnterprise64.msi" 
+Start-BitsTransfer -Source $download -Destination $to_folder 
+
+####  install   google Chrome.msi
+
+Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\GoogleChromeStandaloneEnterprise64.msi /quiet "
+
+####  end
+####  *******************************************************************************************************
