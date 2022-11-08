@@ -94,5 +94,19 @@ Start-BitsTransfer -Source $download -Destination $to_folder
 
 Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\GoogleChromeStandaloneEnterprise64.msi /quiet "
 
+##--------------------------------------------------------
+
+####  download  notepad++
+
+$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.6/npp.8.4.6.Installer.exe"
+$to_folder = "C:\software\npp.8.4.6.Installer.exe" 
+Invoke-WebRequest $download -OutFile $to_folder
+
+####  install   notepad++
+
+Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
+
+##--------------------------------------------------------
+
 ####  end
 ####  *******************************************************************************************************
