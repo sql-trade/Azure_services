@@ -108,5 +108,10 @@ Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 
 ##--------------------------------------------------------
 
+
+####  show File Extensions
+
+Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'HideFileExt' -value 0
+
 ####  end
 ####  *******************************************************************************************************
