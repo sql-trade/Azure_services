@@ -80,6 +80,16 @@ If(!(test-path -PathType container $path) )
     New-Item -ItemType Directory -Path $path
 }
 
+##----
+
+$path = "C:\Projects\"
+Write-Host "Setting Directory ""$path"" "
+
+If(!(test-path -PathType container $path) )
+{
+    New-Item -ItemType Directory -Path $path
+}
+
 ##--------------------------------------------------------
 
 ####  download  google Chrome.msi
