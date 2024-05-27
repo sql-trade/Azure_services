@@ -118,6 +118,18 @@ Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 
 ##--------------------------------------------------------
 
+####  download  git-for-windows
+
+$download  = "https://github.com/git-for-windows/git/releases/download/v2.45.1.windows.1/Git-2.45.1-64-bit.exe"
+$to_folder = "C:\software\Git-2.45.1-64-bit.exe" 
+Invoke-WebRequest $download -OutFile $to_folder
+
+####  install   git-for-windows
+
+## Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
+
+##--------------------------------------------------------
+
 
 ####  show File Extensions
 
