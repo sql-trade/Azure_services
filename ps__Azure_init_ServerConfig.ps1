@@ -1,12 +1,17 @@
 
 Write-Host ".. start Configuration"
 ##--------------------------------------------------------
-
+Write-Host
 Write-Host "show Windows-Version"
 (Get-WmiObject -class Win32_OperatingSystem).Caption
 
 [environment]::OSVersion.VersionString
 ##[environment]::OSVersion.Version
+
+Write-Host 
+Write-Host "MachineName: " ([environment]::MachineName)
+Write-Host "DomainName:  " ([environment]::UserDomainName)
+Write-Host "UserName:    " ([environment]::UserName)
 
 ##--------------------------------------------------------
 
