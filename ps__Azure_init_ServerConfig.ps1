@@ -120,6 +120,18 @@ Invoke-WebRequest $download -OutFile $to_folder
 ####  install   notepad++
 
 Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
+##--------------------------------------------------------
+
+####  download  Lightshot 
+####  https://app.prntscr.com/en/translate-lightshot.html
+
+$download  = "https://app.prntscr.com/build/setup-lightshot.exe" 
+$to_folder = "C:\software\setup-lightshot.exe"
+Invoke-WebRequest $download -OutFile $to_folder
+
+####  install   Lightshot
+
+Start-Process $to_folder 
 
 ##--------------------------------------------------------
 
