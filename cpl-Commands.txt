@@ -13,7 +13,7 @@
 11.   rstrui                                       The command helps to access the System Restore feature                                        
 12.   sdclt                                        The command helps to access Devices and Printers’ properties                                  
 13.   shrpubw                                      The command helps to Create A Shared Folder Wizard                                            
-14.   slui                                         The command helps to view and change Windows Activation settings                              
+14.   slmgr                                        The command helps to view and change Windows Activation settings                              
 15.   systempropertiesdataexecutionprevention      The command is used to open Data Execution Prevention (DEP) feature                           
 16.   systempropertiesperformance                  The command helps to access Performance Options                                               
 17.   tabletpc.cpl                                 The command helps to access Pen and Touch options                                             
