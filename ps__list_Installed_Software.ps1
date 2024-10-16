@@ -20,9 +20,10 @@ $thisSubKey=$InstalledSoftware.OpenSubKey($thisKey)
 
 $obj = New-Object PSObject
 
-$obj | Add-Member -MemberType NoteProperty -Name "ComputerName"   -Value $pcname                                    
-$obj | Add-Member -MemberType NoteProperty -Name "DisplayName"    -Value $($thisSubKey.GetValue("DisplayName"))     
-$obj | Add-Member -MemberType NoteProperty -Name "DisplayVersion" -Value $($thisSubKey.GetValue("DisplayVersion"))  
+$obj | Add-Member -MemberType NoteProperty -Name "ComputerName"    -Value $pcname                                    
+$obj | Add-Member -MemberType NoteProperty -Name "DisplayName"     -Value $($thisSubKey.GetValue("DisplayName"))     
+$obj | Add-Member -MemberType NoteProperty -Name "DisplayVersion"  -Value $($thisSubKey.GetValue("DisplayVersion"))  
+$obj | Add-Member -MemberType NoteProperty -Name "InstallLocation" -Value $($thisSubKey.GetValue("InstallLocation"))  
 
 $list += $obj
 }
@@ -30,6 +31,6 @@ $list += $obj
 ## --
 
 
-$list | where { $_.DisplayName } | select ComputerName, DisplayName, DisplayVersion | Sort-Object DisplayName | FT  
+$list | where { $_.DisplayName } | select ComputerName, DisplayName, DisplayVersion, InstallLocation | Sort-Object DisplayName | FT  
 
 ## ---- end ----
