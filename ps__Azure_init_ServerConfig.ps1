@@ -68,7 +68,7 @@ Set-Culture $culture
 ####  create Directory
 
 
-$path = "C:\software\"
+$path = "C:\software\winTools\"
 Write-Host "Setting Directory ""$path"" "
 
 If(!(test-path -PathType container $path) )
@@ -102,19 +102,19 @@ If(!(test-path -PathType container $path) )
 ##$WebClient = New-Object System.Net.WebClient
 
 $download  = "https://testfabrik.blob.core.windows.net/tradersdownload/GoogleChromeStandaloneEnterprise64.msi"
-$to_folder = "C:\software\GoogleChromeStandaloneEnterprise64.msi" 
+$to_folder = "C:\software\winTools\GoogleChromeStandaloneEnterprise64.msi" 
 Start-BitsTransfer -Source $download -Destination $to_folder 
 
 ####  install   google Chrome.msi
 
-Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\GoogleChromeStandaloneEnterprise64.msi /quiet "
+Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\winTools\GoogleChromeStandaloneEnterprise64.msi /quiet "
 
 ##--------------------------------------------------------
 
 ####  download  notepad++
 
 $download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.5/npp.8.7.5.Installer.exe"
-$to_folder = "C:\software\npp.8.7.5.Installer.exe" 
+$to_folder = "C:\software\winTools\npp.8.7.5.Installer.exe" 
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   notepad++
@@ -126,7 +126,7 @@ Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 ####  https://app.prntscr.com/en/translate-lightshot.html
 
 $download  = "https://app.prntscr.com/build/setup-lightshot.exe" 
-$to_folder = "C:\software\setup-lightshot.exe"
+$to_folder = "C:\software\winTools\setup-lightshot.exe"
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   Lightshot
@@ -138,7 +138,7 @@ Start-Process $to_folder
 ####  download  git-for-windows
 
 $download  = "https://github.com/git-for-windows/git/releases/download/v2.45.1.windows.1/Git-2.45.1-64-bit.exe"
-$to_folder = "C:\software\Git-2.45.1-64-bit.exe" 
+$to_folder = "C:\software\winTools\Git-2.45.1-64-bit.exe" 
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   git-for-windows
