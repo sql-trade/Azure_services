@@ -154,3 +154,8 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ####  end
 ####  *******************************************************************************************************
+
+
+##  plus  https://forums.powershell.org/t/bginfo-powershell-script/23176
+##  BGinfo.exe
+
