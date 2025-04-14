@@ -34,11 +34,13 @@ switch ($release) {
     default { $version = $null; break }
 }
 
+Write-Host
 if ($version) {
     Write-Host -Object ".NET Framework Version: $version"
 } else {
     Write-Host -Object '.NET Framework Version 4.5 or later is not detected.'
 }
+Write-Host
 
 ## https://learn.microsoft.com/en-us/dotnet/framework/install/how-to-determine-which-versions-are-installed
 
