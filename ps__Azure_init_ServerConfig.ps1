@@ -16,7 +16,7 @@ Write-Host "UserName:    " ([environment]::UserName)
 ##--------------------------------------------------------
 
 Write-Host 
-Write-Host "installed .NET version:
+Write-Host "installed .NET version: "
 
 $release = Get-ItemPropertyValue -LiteralPath 'HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full' -Name Release
 switch ($release) {
