@@ -2,6 +2,9 @@
 _readme__Win11_+_ServerInstall.txt
 ----------------------------------
 
+C:\>systeminfo
+
+--------
 
 ncpa.cpl  -->  Windows-Netzwerk_Mgmt.
 -->  fixed IP
