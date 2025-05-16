@@ -161,7 +161,7 @@ Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   Lightshot
 
-Start-Process $to_folder 
+## Start-Process $to_folder 
 
 ##--------------------------------------------------------
 
