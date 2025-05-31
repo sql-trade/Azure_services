@@ -143,8 +143,8 @@ Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\winTools\GoogleChr
 
 ####  download  notepad++
 
-$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.5/npp.8.7.5.Installer.exe"
-$to_folder = "C:\software\winTools\npp.8.7.5.Installer.exe" 
+$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.exe"
+$to_folder = "C:\software\winTools\npp.8.8.1.Installer.exe" 
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   notepad++
