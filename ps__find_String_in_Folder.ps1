@@ -18,7 +18,7 @@ $folderArray = @()
 Get-ChildItem $folder -Filter $filter -Recurse |
 ForEach-Object {
       If (Get-Content $_.FullName | Select-String -Pattern $string ){
-          $folderArray = $folderArray + $_.FullName + [Environment]::NewLine
+          $folderArray = $folderArray + $_.Name + [Environment]::NewLine  ##---- $_.Name | $_.FullName
       }
 }
 
