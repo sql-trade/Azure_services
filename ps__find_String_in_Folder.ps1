@@ -14,7 +14,7 @@ $result = $result     + "------"                            + [Environment]::New
 $result = $result     + " "
 
 $folderArray = @()
-Get-ChildItem $folder -Filter *.cs -Recurse |
+Get-ChildItem $folder -Filter *.* -Recurse |
 ForEach-Object {
       If (Get-Content $_.FullName | Select-String -Pattern $string ){
           $folderArray = $folderArray + $_.FullName + [Environment]::NewLine
