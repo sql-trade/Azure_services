@@ -10,7 +10,7 @@ $outfile = "C:\temp\_result.txt"
 
 ## ----------
 $result = "string: '" + $string + "' in folder: " + $folder + [Environment]::NewLine
-$result = $result     + "------"                      + [Environment]::NewLine
+$result = $result     + "------"                            + [Environment]::NewLine
 $result = $result     + " "
 
 $folderArray = @()
