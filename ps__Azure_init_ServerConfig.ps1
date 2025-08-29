@@ -143,8 +143,8 @@ Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\winTools\GoogleChr
 
 ####  download  notepad++
 
-$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.exe"
-$to_folder = "C:\software\winTools\npp.8.8.1.Installer.exe" 
+$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.3/npp.8.8.3.Installer.exe"
+$to_folder = "C:\software\winTools\npp.8.8.3.Installer.exe" 
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   notepad++
@@ -188,4 +188,5 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ##  plus  https://forums.powershell.org/t/bginfo-powershell-script/23176
 ##  BGinfo.exe
+
 
