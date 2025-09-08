@@ -1,0 +1,19 @@
+
+
+mstsc /v:52.178.222.5 /admin
+
+
+/multimon  Enables multiple monitor support for the session.
+           Example: mstsc /multimon
+
+
+----
+
+Admin RDP Sessions:
+
+Do not consume a CAL, saving costs.
+Allow up to two concurrent sessions per server.
+Provide unrestricted administrative access.
+
+
+
