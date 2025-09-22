@@ -136,7 +136,6 @@ $to_folder = "C:\software\winTools\GoogleChromeStandaloneEnterprise64.msi"
 Start-BitsTransfer -Source $download -Destination $to_folder 
 
 ####  install   google Chrome.msi
-
 Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\winTools\GoogleChromeStandaloneEnterprise64.msi /quiet "
 
 ##--------------------------------------------------------
@@ -148,7 +147,6 @@ $to_folder = "C:\software\winTools\npp.8.8.3.Installer.exe"
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   notepad++
-
 Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 ##--------------------------------------------------------
 
@@ -182,8 +180,7 @@ $to_folder = "C:\software\winTools\setup-lightshot.exe"
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   Lightshot
-
-## Start-Process $to_folder 
+##--  Start-Process $to_folder 
 
 ##--------------------------------------------------------
 
@@ -194,8 +191,7 @@ $to_folder = "C:\software\winTools\Git-2.51.0-64-bit.exe"
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   git-for-windows
-
-## Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
+##--  Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 
 ##--------------------------------------------------------
 
@@ -206,13 +202,3 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ####  end
 ####  *******************************************************************************************************
-
-
-##  plus  https://forums.powershell.org/t/bginfo-powershell-script/23176
-##  BGinfo.exe
-
-
-
-
-
-
