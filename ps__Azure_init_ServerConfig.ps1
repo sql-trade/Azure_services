@@ -152,6 +152,16 @@ Invoke-WebRequest $download -OutFile $to_folder
 Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 ##--------------------------------------------------------
 
+####  download  dotnet-sdk-7.0.410-win-x64.exe 
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/dotnet-sdk-7.0.410-win-x64.exe" 
+$to_folder = "C:\software\dotnet-sdk-7.0.410-win-x64.exe"
+Invoke-WebRequest $download -OutFile $to_folder
+
+####  install   dotnet-sdk-7.0.410-win-x64.exe 
+
+##--------------------------------------------------------
+
 ####  download  Lightshot 
 ####  https://app.prntscr.com/en/translate-lightshot.html
 
@@ -188,6 +198,7 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ##  plus  https://forums.powershell.org/t/bginfo-powershell-script/23176
 ##  BGinfo.exe
+
 
 
 
