@@ -152,6 +152,16 @@ Invoke-WebRequest $download -OutFile $to_folder
 Start-Process $to_folder /S -NoNewWindow -Wait -PassThru
 ##--------------------------------------------------------
 
+####  download  BGinfo.zip
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/BGInfo.zip" 
+$to_folder = "C:\software\winTools\BGInfo.zip"
+Invoke-WebRequest $download -OutFile $to_folder
+
+Expand-Archive -LiteralPath "C:\software\winTools\BGInfo.zip" -DestinationPath "C:\software\winTools"
+
+##--------------------------------------------------------
+
 ####  download  dotnet-sdk-7.0.410-win-x64.exe 
 
 $download  = "https://testfabrik.blob.core.windows.net/tradersdownload/dotnet-sdk-7.0.410-win-x64.exe" 
@@ -198,6 +208,7 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ##  plus  https://forums.powershell.org/t/bginfo-powershell-script/23176
 ##  BGinfo.exe
+
 
 
 
