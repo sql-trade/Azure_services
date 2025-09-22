@@ -158,7 +158,9 @@ $download  = "https://testfabrik.blob.core.windows.net/tradersdownload/BGInfo.zi
 $to_folder = "C:\software\winTools\BGInfo.zip"
 Invoke-WebRequest $download -OutFile $to_folder
 
-Expand-Archive -LiteralPath "C:\software\winTools\BGInfo.zip" -DestinationPath "C:\software\winTools"
+####  apply
+Expand-Archive -LiteralPath "C:\software\winTools\BGInfo.zip" -DestinationPath "C:\software\winTools" -Force
+cmd.exe /c " C:\software\winTools\BGinfo\Bginfo64.exe  C:\software\winTools\BGinfo\config_BGinfo.bgi  /timer:0  /accepteula " 
 
 ##--------------------------------------------------------
 
@@ -208,6 +210,7 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ##  plus  https://forums.powershell.org/t/bginfo-powershell-script/23176
 ##  BGinfo.exe
+
 
 
 
