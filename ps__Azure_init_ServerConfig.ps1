@@ -184,6 +184,16 @@ Invoke-WebRequest $download -OutFile $to_folder
 
 ##--------------------------------------------------------
 
+####  download  AnyDesk 
+####  https://anydesk.com/de/downloads/windows
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/AnyDesk.zip" 
+$to_folder = "C:\software\AnyDesk.zip"
+Invoke-WebRequest $download -OutFile $to_folder
+
+Expand-Archive -LiteralPath "C:\software\AnyDesk.zip" -DestinationPath "C:\software" -Force
+
+##--------------------------------------------------------
 ####  download  git-for-windows
 
 $download  = "https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/Git-2.51.0-64-bit.exe"
@@ -202,4 +212,5 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ####  end
 ####  *******************************************************************************************************
+
 
