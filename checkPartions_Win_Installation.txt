@@ -1,0 +1,25 @@
+checkPartions_Win_Installation
+
+
+
+>>
+manually deleting a partition
+
+1. refer to video
+https://youtu.be/1CAWuNByPqM
+
+2. following steps
+
+a)   [shift] + [F10]
+
+b)   diskpart
+
+c)   list disk
+
+d)   select disk 0  
+
+e)   clean
+
+f)   convert gpt
+
+----
