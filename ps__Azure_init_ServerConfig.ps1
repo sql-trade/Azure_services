@@ -194,6 +194,15 @@ Invoke-WebRequest $download -OutFile $to_folder
 Expand-Archive -LiteralPath "C:\software\AnyDesk.zip" -DestinationPath "C:\software" -Force
 
 ##--------------------------------------------------------
+
+####  download  Discord 
+####  https://discord.com/
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/DiscordSetup.exe" 
+$to_folder = "C:\software\DiscordSetup.exe"
+Invoke-WebRequest $download -OutFile $to_folder
+
+##--------------------------------------------------------
 ####  download  git-for-windows
 
 $download  = "https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/Git-2.51.0-64-bit.exe"
@@ -212,6 +221,7 @@ Set-Itemproperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ####  end
 ####  *******************************************************************************************************
+
 
 
 
