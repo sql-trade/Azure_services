@@ -1,0 +1,15 @@
+
+
+to change pwd on Remotedesktop connection
+
+open  osk.exe  (= On-Screen Keyboard)
+
+more details here
+https://support.microsoft.com/en-us/windows/use-the-on-screen-keyboard-osk-to-type-ecbb5e08-5b4e-d8c8-f794-81dbf896267a
+
+then press [Crtl] + [Alt]  ==> Hardware Keyboard
+                  + [Del]  ==> On-Screen Keyboard
+
+continue with Password-Change  ...
+
+----  
