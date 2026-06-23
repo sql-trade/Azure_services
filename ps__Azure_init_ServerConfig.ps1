@@ -139,7 +139,16 @@ Start-BitsTransfer -Source $download -Destination $to_folder
 Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\winTools\GoogleChromeStandaloneEnterprise64.msi /quiet "
 
 ##--------------------------------------------------------
+####  download  NinjaTrader
 
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/NinjaTrader.Install.8.1.7.2.msi"
+$to_folder = "C:\software\NinjaTrader.Install.8.1.7.2.msi" 
+Invoke-WebRequest $download -OutFile $to_folder
+
+#### install
+##   Start-Process msiexec.exe ...
+
+##--------------------------------------------------------
 ####  download  notepad++
 
 $download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.4/npp.8.9.6.4.Installer.exe"
