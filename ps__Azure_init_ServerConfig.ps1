@@ -139,6 +139,7 @@ Start-BitsTransfer -Source $download -Destination $to_folder
 Start-Process msiexec.exe -Wait -ArgumentList "/I C:\software\winTools\GoogleChromeStandaloneEnterprise64.msi /quiet "
 
 ##--------------------------------------------------------
+##--------------------------------------------------------
 ####  download  NinjaTrader
 
 $download  = "https://testfabrik.blob.core.windows.net/tradersdownload/NinjaTrader.Install.8.1.7.2.msi"
@@ -148,6 +149,17 @@ Invoke-WebRequest $download -OutFile $to_folder
 #### install
 ##   Start-Process msiexec.exe ...
 
+##--------------------------------------------------------
+####  download  dxFeed for NinjaTrader
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/dxFeed_NinjaTrader_data_Plug-in.msi"
+$to_folder = "C:\software\dxFeed_NinjaTrader_data_Plug-in.msi" 
+Invoke-WebRequest $download -OutFile $to_folder
+
+#### install
+##   Start-Process msiexec.exe ...
+
+##--------------------------------------------------------
 ##--------------------------------------------------------
 ####  download  notepad++
 
