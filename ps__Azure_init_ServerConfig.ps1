@@ -181,6 +181,16 @@ Invoke-WebRequest $download -OutFile $to_folder
 
 ##--------------------------------------------------------
 
+####  download  dotnet-sdk-10.0.201-win-x64.exe 
+
+$download  = "https://testfabrik.blob.core.windows.net/tradersdownload/dotnet-sdk-10.0.201-win-x64.exe" 
+$to_folder = "C:\software\dotnet-sdk-10.0.201-win-x64.exe"
+Invoke-WebRequest $download -OutFile $to_folder
+
+####  install   dotnet-sdk-7.0.410-win-x64.exe 
+
+##--------------------------------------------------------
+
 ####  download  Lightshot 
 ####  https://app.prntscr.com/en/translate-lightshot.html
 
