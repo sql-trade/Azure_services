@@ -163,8 +163,8 @@ Invoke-WebRequest $download -OutFile $to_folder
 ##--------------------------------------------------------
 ####  download  notepad++
 
-$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.4/npp.8.9.6.4.Installer.exe"
-$to_folder = "C:\software\winTools\npp.8.9.6.4.Installer.exe" 
+$download  = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.8/npp.8.9.8.Installer.exe"
+$to_folder = "C:\software\winTools\npp.8.9.8.Installer.exe" 
 Invoke-WebRequest $download -OutFile $to_folder
 
 ####  install   notepad++
