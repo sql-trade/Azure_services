@@ -2,6 +2,8 @@
 ####  run as Administrator !!
 
 cmd-command          net start Audiosrv  
+cmd-command          sc config Audiosrv start= auto
+
 powershell    cmd /c net start Audiosrv  
 ####          ---------------------------
 
